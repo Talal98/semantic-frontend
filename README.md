@@ -1,27 +1,47 @@
-# React + TypeScript + Vite
+# Semantic Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend implementation for a PageRank calculation system. The frontend is developed using React.Js and Typescript.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with the project, follow these instructions:
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
+   ```sh
+   git clone https://github.com/talal-098/semantic-frontend.git
+   ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. Navigate to the project directory:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```sh
+   cd semantic-frontend
+   ```
+
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+### Usage
+
+1. Start the project:
+   ```sh
+   npm run dev
+   ```
+
+2. The project will start running at http://localhost:5173/
+
+3. To completely use it, backend should be configured. It could be found on this link: https://github.com/talal-098/semantic-backend
+
+4. If the backend is not running on port 3001 of localhost. Its endpoint should be updated in file: src/utils/axios/index.ts
+
+### Backend Repository
+
+The backend for this project is located in a separate repository, available at the following link:
+
+https://github.com/talal-098/semantic-backend
+
+Feel free to explore the frontend repository to understand the complete system and its functionalities.
