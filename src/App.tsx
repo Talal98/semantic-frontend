@@ -72,7 +72,12 @@ const App = () => {
 
         {state && (
           <GraphWrapper>
-            <BasicFlow nodes={nodes} setNodes={setNodes} edges={edges} />
+            <BasicFlow
+              nodes={nodes}
+              setNodes={setNodes}
+              edges={edges}
+              setState={setState}
+            />
           </GraphWrapper>
         )}
       </ContentContainer>

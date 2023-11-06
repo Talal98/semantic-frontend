@@ -38,6 +38,22 @@ export const addEdge = async (source: number, target: number) => {
   }
 };
 
+export const deleteEdge = async (source: number, target: number) => {
+  try {
+    const { data } = await axiosClient.delete<GraphNode[]>("/graph", {
+      data: {
+        source,
+        target,
+      },
+    });
+
+    return data;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    throw error.response.data;
+  }
+};
+
 export const calculatePageRank = async () => {
   try {
     const { data } = await axiosClient.get<PageRankType[]>("/graph/pageRank");
